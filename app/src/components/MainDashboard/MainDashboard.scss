@@ -1,0 +1,63 @@
+.app {
+    display: flex;
+    background-color: black;
+  }
+  
+  .sidebar {
+    background: black;
+    padding: 0px;
+    height: 100vh;
+    transition: width 0.3s;
+    width: 60px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+      li {
+        cursor: pointer;
+        padding: 10px;
+        margin-right: 5px;
+
+        img {
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .sidebar-content {
+    background: white;
+    width: 100%;
+    border-radius: 15px;
+
+    .header {
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 1px solid #D0D2D6;
+      height: 64px;
+  
+      .image-container {
+        margin-right: 50px;
+        img {
+          margin-top: 20px;
+        }
+      }
+
+      .user-menu {
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+          height: 20px;
+          margin-top: 16px;
+          margin-right: 45px;
+        }
+      }
+    }
+  }
+
+  .router-view-container {
+    margin: 100px 140px;
+  }

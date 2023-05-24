@@ -1,0 +1,69 @@
+.documents-list-container {
+    width: 100%;
+    height: 433px;
+    margin-left: 40px;
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+            font-family: 'Pulp Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+        }
+
+        button.clear {
+            margin-top: 0;
+            font-size: 14px;
+        }
+    }
+
+    table {
+        border: 1px solid #D0D2D6;
+        border-radius: 6px;
+        width: 100%;
+        padding: 24px 24px 12px 24px;
+
+        th {
+            text-align: left;
+            color: #5B6270;
+            font-size: 14px;
+
+            hr {
+                margin-top: 30px;
+            }
+        }
+
+        td {
+            color: #151F32;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        th.icon-text, td.icon-text {
+            display: flex;
+            align-items: center;
+        }
+
+        th.padded, td.padded {
+            padding-left: 30px;
+            padding-top: 5px;
+        }
+
+        hr {
+            border: 0.5px solid #D0D2D6;
+        }
+
+        tr {
+            height: 34px;
+        }
+        .row-action {
+            background: white;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.career-goal-title {
+    font-family: 'Pulp Display';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 32px;
+}
+
+.career-goal-container {
+    width: 260px;
+    height: 433px;
+    border: 1px solid #D0D2D6;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 40px 5px 40px;
+
+    .goal-description {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    margin-top: 50px;
+    }
+
+    .goal-position {
+        margin-top: 10px;
+    }
+
+
+}

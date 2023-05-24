@@ -1,0 +1,29 @@
+.selection-container {
+    text-align: center;
+
+    .title {
+        margin-top: 20vh;
+        font-weight: 500;
+        margin-bottom: 40px;
+        color: #493DF5;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    .button-container {
+        display: flex;
+        justify-content: space-around;
+        width: 500px;
+        margin: 0 auto;
+    
+        button {
+        padding: 15px;
+        width: 200px;
+        background: #493DF5;
+        color: white;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        }
+    }
+}
