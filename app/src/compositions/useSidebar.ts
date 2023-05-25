@@ -1,4 +1,4 @@
-import { getDefaultLogo } from '@/utils/user';
+import { getDefaultLogo } from '../utils/user';
 import { ref, SetupContext, computed, Ref } from 'vue';
 import { useRouter, Router } from 'vue-router';
 import { useStore } from 'vuex';

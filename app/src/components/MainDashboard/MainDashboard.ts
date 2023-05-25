@@ -1,7 +1,7 @@
 import { defineComponent, SetupContext, computed, Ref } from 'vue';
-import { useSidebar } from '@/compositions/useSidebar';
+import { useSidebar } from '../../compositions/useSidebar';
 import { useStore } from 'vuex';
-import { getDefaultLogo } from '@/utils/user';
+import { getDefaultLogo } from '../../utils/user';
 
 import { State } from '@/store';
 import { User } from '@/typings';
