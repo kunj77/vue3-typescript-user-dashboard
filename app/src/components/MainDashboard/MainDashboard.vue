@@ -28,4 +28,4 @@
 
 <script lang="ts" src="./MainDashboard.ts"></script>
 
-<style lang="scss" src="./MainDashboard.scss" scoped></style>
+<style lang="scss" src="./MainDashboard.scss"></style>

@@ -13,4 +13,4 @@
 
 <script lang="ts" src="./CareerGoal.ts"></script>
 
-<style lang="scss" src="./CareerGoal.scss" scoped></style>
+<style lang="scss" src="./CareerGoal.scss"></style>

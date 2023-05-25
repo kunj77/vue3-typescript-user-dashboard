@@ -3,20 +3,21 @@
     height: 433px;
     margin-left: 40px;
     
-    .header {
+    .documents-list-header {
         display: flex;
         justify-content: space-between;
 
         h4 {
             font-family: 'Pulp Display';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 32px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 32px;
+            margin-bottom: 16px;
         }
 
         button.clear {
-            margin-top: 0;
+            margin-top: 25px;
             font-size: 14px;
         }
     }
@@ -40,7 +41,6 @@
         td {
             color: #151F32;
             font-size: 14px;
-            font-weight: 700;
         }
 
         th.icon-text, td.icon-text {
@@ -51,6 +51,7 @@
         th.padded, td.padded {
             padding-left: 30px;
             padding-top: 5px;
+            font-weight: 700;
         }
 
         hr {

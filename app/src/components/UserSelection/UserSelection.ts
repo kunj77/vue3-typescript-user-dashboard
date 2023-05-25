@@ -16,6 +16,7 @@ export default defineComponent({  components: {
     const store = useStore<State>();
     const spinnerProgress: Ref<number> = ref(0);
     const reactiveSpinnerProgress: Ref<number> = toRef(spinnerProgress, 'value'); // Create a reactive reference
+    const errorMsg: Ref<string> = ref('Something went wrong');
 
     const selectUserType = async (type: string) => {
       userType.value = type;
@@ -30,8 +31,8 @@ export default defineComponent({  components: {
         await getCareerGoal();
         dataLoaded.value = true;
         spinnerProgress.value = 0;
-      } catch (error) {
-        console.error(error);
+      } catch (error: any) {
+        errorMsg.value = error.message || 'Something went wrong! Please try again later.'
       }
     };
 
@@ -46,9 +47,8 @@ export default defineComponent({  components: {
           const userData: User = response.data; 
           store.dispatch('setUser', userData);
         }
-      } catch (error) {
-        console.error(error);
-        // Handle the error here (e.g., show an error message)
+      } catch (error: any) {
+        errorMsg.value = error.message || 'Something went wrong! Please try again later.'
       }
     };
 
@@ -57,9 +57,8 @@ export default defineComponent({  components: {
         const response = await UserDataService.getDocuments();
         const documents: DocumentsList = response.data; 
         store.dispatch('setDocuments', documents);
-      } catch (error) {
-        console.error(error);
-        // Handle the error here (e.g., show an error message)
+      } catch (error: any) {
+        errorMsg.value = error.message || 'Something went wrong! Please try again later.'
       }
     };
 
@@ -68,9 +67,8 @@ export default defineComponent({  components: {
         const response = await UserDataService.getCareerGoal();
         const careerGoal: CareerGoalList = response.data; 
         store.dispatch('setCareerGoal', careerGoal);
-      } catch (error) {
-        console.error(error);
-        // Handle the error here (e.g., show an error message)
+      } catch (error: any) {
+        errorMsg.value = error.message || 'Something went wrong! Please try again later.'
       }
     };
 
@@ -83,7 +81,8 @@ export default defineComponent({  components: {
     return {
       dataLoaded,
       selectUserType,
-      spinnerProgress: reactiveSpinnerProgress
+      spinnerProgress: reactiveSpinnerProgress,
+      errorMsg: errorMsg.value
     };
   }
 });

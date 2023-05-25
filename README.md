@@ -8,7 +8,7 @@ This project creates a basic user dashboard using Vue3. The app folder contains 
 ## In order to run the whole app:
 ### Start Backend Server
 
-- Open terminal and get inside the `backend` folder
+- Open terminal and get inside the `api` folder
 - Run `npm install` to install required packages 
 - Run `npm run dev`
 

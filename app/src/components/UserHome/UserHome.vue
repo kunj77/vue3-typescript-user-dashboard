@@ -9,4 +9,4 @@
 
 <script lang="ts" src="./UserHome.ts"></script>
 
-<style lang="scss" src="./UserHome.scss" scoped></style>
+<style lang="scss" src="./UserHome.scss"></style>

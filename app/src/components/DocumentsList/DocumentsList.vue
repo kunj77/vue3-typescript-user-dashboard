@@ -1,6 +1,6 @@
 <template>
   <div class="documents-list-container">
-    <div class="header">
+    <div class="documents-list-header">
       <h4>Recent Documents</h4>
       <button class="clear">View All Documents</button>
     </div>
@@ -47,4 +47,4 @@
 
 <script lang="ts" src="./DocumentsList.ts"></script>
 
-<style lang="scss" src="./DocumentsList.scss" scoped></style>
+<style lang="scss" src="./DocumentsList.scss"></style>

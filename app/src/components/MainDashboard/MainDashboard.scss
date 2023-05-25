@@ -2,6 +2,18 @@
     display: flex;
     background-color: black;
   }
+
+  .router-view-container {
+    margin: 100px 140px;
+  }
+
+  .default-logo {
+    background-color: #493DF5;
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+    text-align: center;
+  }
   
   .sidebar {
     background: black;
@@ -22,6 +34,14 @@
 
         img {
           padding: 10px;
+          width: 18px;
+          height: 18px;
+        }
+
+        .default-logo {
+          width: 40px;
+          height: 28px;
+          padding-top: 12px;
         }
       }
     }
@@ -35,13 +55,12 @@
     .header {
       display: flex;
       justify-content: flex-end;
-      border-bottom: 1px solid #D0D2D6;
       height: 64px;
-  
+      border-bottom: 1px solid #D0D2D6;
       .image-container {
         margin-right: 50px;
         img {
-          margin-top: 20px;
+          margin-top: 25px;
         }
       }
 
@@ -51,13 +70,22 @@
 
         img {
           height: 20px;
-          margin-top: 16px;
+          margin-top: 22px;
           margin-right: 45px;
+          margin-left: 10px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-top: 23px;
+        }
+
+        .default-logo {
+          width: 24px;
+          height: 21px;
+          margin: 20px 10px;
+          padding-top: 3px;
         }
       }
     }
-  }
-
-  .router-view-container {
-    margin: 100px 140px;
   }
