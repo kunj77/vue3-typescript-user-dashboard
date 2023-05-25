@@ -20,17 +20,28 @@ export default defineComponent({
 
     const store = useStore<State>();
 
+    // If there is no recieved_on specified, we assume it is an old document or the document is approved 
+    const defaultRecievedOn: Date = new Date('Jan 01 1970'); 
+
     const filteredDocuments: Ref<Document[] | null> = computed(() => {
-      const documentsToShow = store.getters.getDocuments?.data.slice(0, rowsPerPage.value);
+      const documentList = store.getters.getDocuments?.data;
+
+      const recentDocuments = documentList.sort((prevDoc: Document, nextDoc: Document) => {
+        const dateA = new Date(prevDoc.received_on || defaultRecievedOn);
+        const dateB = new Date(nextDoc.received_on || defaultRecievedOn);
+        return dateB.getTime() - dateA.getTime();
+      });
+      const documentsToShow = recentDocuments?.slice(0, rowsPerPage.value);
       return documentsToShow;
     });
 
     const formatDate = (date: Date): string => {
-      const formattedDate = new Date(date).toLocaleDateString('en-US', {
-        day: 'numeric',
-        month: 'short',
-        year: 'numeric'
-      });
+      const formattedDate = date === defaultRecievedOn ? '' : 
+        new Date(date).toLocaleDateString('en-US', {
+          day: 'numeric',
+          month: 'short',
+          year: 'numeric'
+        });
 
       return formattedDate;
     };

@@ -16,7 +16,7 @@ export default defineComponent({  components: {
     const store = useStore<State>();
     const spinnerProgress: Ref<number> = ref(0);
     const reactiveSpinnerProgress: Ref<number> = toRef(spinnerProgress, 'value'); // Create a reactive reference
-    const errorMsg: Ref<string> = ref('Something went wrong');
+    const errorMsg: Ref<string> = ref('');
 
     const selectUserType = async (type: string) => {
       userType.value = type;

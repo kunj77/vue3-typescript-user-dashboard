@@ -48,12 +48,12 @@ export interface Document {
     issuer_name: string;
     issuer_logo_url: string;
     recipient_name: string;
-    received_on: string | null;
-    expire_at: string | null;
-    created_at: string;
-    updated_at: string;
-    archived_at: string | null;
-    deleted_at: string | null;
+    received_on: Date | null;
+    expire_at: Date | null;
+    created_at: Date;
+    updated_at: Date;
+    archived_at: Date | null;
+    deleted_at: Date | null;
   }
 
 export interface DocumentsList {
